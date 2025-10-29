@@ -70,7 +70,6 @@
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="$URL_SCHEME"/>
       </intent-filter>
-      </intent-filter>
     </config-file>
   </platform>
 
