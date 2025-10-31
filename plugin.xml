@@ -59,19 +59,14 @@
 
     <source-file src="src/android/nl/xservices/plugins/LaunchMyApp.java" target-dir="src/nl/xservices/plugins"/>
 
- <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest" mode="merge">
-    <manifest xmlns:tools="http://schemas.android.com/tools" />
-  </edit-config>
-
-  <!-- EIN sauberer VIEW-Filter mit nur Scheme -->
-  <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application/activity">
-    <intent-filter tools:node="merge">
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data android:scheme="$ANDROID_SCHEME" />
-    </intent-filter>
-  </config-file>
+    <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application/activity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="$ANDROID_SCHEME" />
+      </intent-filter>
+    </config-file>
     
   </platform>
 
