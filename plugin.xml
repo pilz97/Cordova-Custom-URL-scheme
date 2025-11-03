@@ -68,6 +68,9 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
+        <data
+          android:scheme="$ANDROID_SCHEME"
+        />
         <data android:scheme="$ANDROID_SCHEME"
               android:ssp="$ANDROID_HOST"
               android:sspPrefix="$ANDROID_PATHPREFIX" />
