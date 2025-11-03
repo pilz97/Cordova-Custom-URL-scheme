@@ -61,13 +61,18 @@
 
     <source-file src="src/android/nl/xservices/plugins/LaunchMyApp.java" target-dir="src/nl/xservices/plugins"/>
 
-   <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application/activity">
-      <intent-filter>
-        <action android:name="android.intent.action.VIEW" />
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="$URL_SCHEME" />
-      </intent-filter>
+    <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application">
+      <activity-alias
+          android:name=".UrlSchemeAlias"
+          android:targetActivity=".MainActivity"
+          android:exported="true">
+        <intent-filter>
+          <action android:name="android.intent.action.VIEW" />
+          <category android:name="android.intent.category.DEFAULT" />
+          <category android:name="android.intent.category.BROWSABLE" />
+          <data android:scheme="$ANDROID_SCHEME" />
+        </intent-filter>
+      </activity-alias>
     </config-file>
     
   </platform>
