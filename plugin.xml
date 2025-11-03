@@ -23,7 +23,7 @@
 
   <preference name="URL_SCHEME" />
   <preference name="ANDROID_SCHEME" /> 
-  <!-- <hook type="after_prepare" src="scripts/after_prepare/add-custom-url-scheme.js" /> -->
+  <hook type="after_prepare" src="scripts/after_prepare/add-custom-url-scheme.js" />
 
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
@@ -66,10 +66,7 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="$ANDROID_SCHEME" />
-        <data android:scheme="$ANDROID_SCHEME"
-          android:host="__noop__"
-          android:pathPrefix="/__never__" />
+        <data android:scheme="$URL_SCHEME" />
       </intent-filter>
     </config-file>
     
