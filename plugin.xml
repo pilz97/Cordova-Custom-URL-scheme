@@ -22,6 +22,8 @@
   <issue>https://github.com/EddyVerbruggen/Custom-URL-scheme/issues</issue>
 
   <preference name="URL_SCHEME" />
+  <preference name="ANDROID_SCHEME" /> 
+  <!-- <hook type="after_prepare" src="scripts/after_prepare/add-custom-url-scheme.js" /> -->
 
   <engines>
     <engine name="cordova" version=">=3.0.0"/>
