@@ -59,26 +59,17 @@
 
     <source-file src="src/android/nl/xservices/plugins/LaunchMyApp.java" target-dir="src/nl/xservices/plugins"/>
 
-  <config-file target="app/src/main/AndroidManifest.xml"
-               parent="/manifest/application/activity[intent-filter/action[@android:name='android.intent.action.MAIN']]">
-    <intent-filter android:priority="1">
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data android:scheme="$ANDROID_SCHEME" />
-    </intent-filter>
-  </config-file>
-
-  <!-- Alter Pfad (cordova-android 9 und älter) -->
-  <config-file target="AndroidManifest.xml"
-               parent="/manifest/application/activity[intent-filter/action[@android:name='android.intent.action.MAIN']]">
-    <intent-filter android:priority="1">
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data android:scheme="$ANDROID_SCHEME" />
-    </intent-filter>
-  </config-file>
+   <config-file target="app/src/main/AndroidManifest.xml" parent="/manifest/application/activity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="$ANDROID_SCHEME" />
+        <data android:scheme="$ANDROID_SCHEME"
+          android:host="__noop__"
+          android:pathPrefix="/__never__" />
+      </intent-filter>
+    </config-file>
     
   </platform>
 
