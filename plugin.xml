@@ -67,8 +67,8 @@
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="$ANDROID_SCHEME"
-              android:host="$ANDROID_HOST"
-              android:pathPrefix="$ANDROID_PATHPREFIX" />
+              android:host=""
+              android:pathPrefix="" />
       </intent-filter>
     </config-file>
     
