@@ -49,6 +49,8 @@
 
   <!-- android -->
   <platform name="android">
+    <preference name="ANDROID_HOST" default="__ssp__" />
+    <preference name="ANDROID_PATHPREFIX" default="__sspprefix__" />
     <js-module src="www/android/LaunchMyApp.js" name="LaunchMyApp">
       <clobbers target="window.plugins.launchmyapp" />
     </js-module>
@@ -67,8 +69,8 @@
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="$ANDROID_SCHEME"
-              android:host=""
-              android:pathPrefix="" />
+              android:ssp="$ANDROID_HOST"
+              android:sspPrefix="$ANDROID_PATHPREFIX" />
       </intent-filter>
     </config-file>
     
